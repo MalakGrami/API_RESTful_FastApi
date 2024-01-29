@@ -1,4 +1,3 @@
-# main.py
 from fastapi import FastAPI, HTTPException
 import requests
 
@@ -11,7 +10,7 @@ def get_weather_data(city):
     try:
         url = BASE_URL + city
         response = requests.get(url)
-        response.raise_for_status()  # Raise an HTTPError for bad responses
+        response.raise_for_status() 
         weather_data = response.json()
         return weather_data
     except requests.RequestException as e:
@@ -20,8 +19,7 @@ def get_weather_data(city):
 @app.get("/weather/{city}")
 async def read_weather(city: str):
     weather_data = get_weather_data(city)
-
-    # Extracting relevant information
+    
     description = weather_data["weather"][0]["description"]
     temperature = weather_data["main"]["temp"]
     humidity = weather_data["main"]["humidity"]
