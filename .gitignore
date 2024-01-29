@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+venv*/
+__venv*/
+env/
+env*/
+
+# Miscellaneous
+*.DS_Store
+*.log
+
+# Compiled bytecode
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# Visual Studio Code
+.vscode/
+
+# IDE-specific files
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
